@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+				http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<!-- circular ok -->
+	<bean id="egg_0" class="spring.demo.model.Egg">
+		<property name="eggName" value="egg_0"/>
+		<property name="chicken" ref="chicken_0"/>
+ 	</bean>
+
+	<bean id="chicken_0" class="spring.demo.model.Chicken">
+		<property name="chickenName" value="chicken_0"/>
+		<property name="egg" ref="egg_0"/>
+	</bean>
+
+	<!-- circular failed -->
+	<!--<bean id="egg_1" class="spring.demo.model.Egg" scope="prototype">-->
+		<!--<property name="eggName" value="egg_1"/>-->
+		<!--<property name="chicken" ref="chicken_1"/>-->
+	<!--</bean>-->
+
+	<!--<bean id="chicken_1" class="spring.demo.model.Chicken" scope="prototype">-->
+		<!--<property name="chickenName" value="chicken_1"/>-->
+		<!--<property name="egg" ref="egg_1"/>-->
+	<!--</bean>-->
+</beans>

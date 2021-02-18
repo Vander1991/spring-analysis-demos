@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jason.com/schema/microwave">
+
+    <element name="microwave">
+        <complexType>
+            <attribute name="id" type="string"/>
+            <attribute name="from" type="string"/>
+        </complexType>
+    </element>
+
+</schema>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+				http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<import resource="beandefinition-alias.xml"></import>
+
+	<bean id="microware2" class="spring.demo.model.MideaMicrowave">
+		<!--<constructor-arg name="hasWheel" value="false"></constructor-arg>-->
+	</bean>
+
+	<bean id="kitchen" class="spring.demo.model.Kitchen">
+		<!--<property name="microwave" ref="micioware2"></property>-->
+		<!--<constructor-arg ref="microware2"/>-->
+
+		<!--<constructor-arg>-->
+			<!--<bean id="microware2" class="spring.demo.MideaMicrowave"/>-->
+		<!--</constructor-arg>-->
+
+		<qualifier type="spring.demo.model.Microwave" value="microwave2"/>
+	</bean>
+
+	<bean id="car_1" class="spring.demo.model.Car"/>
+
+	<bean id="carFactory" class="spring.demo.factory.AbstractCarFactory">
+		<lookup-method name="getCar" bean="car_1"/>
+	</bean>
+
+	<bean id="replacer" class="spring.demo.replace.FoodReplacer"/>
+	<bean id="refrigerator_0" class="spring.demo.model.Refrigerator">
+		<replaced-method name="getFood" replacer="replacer"/>
+	</bean>
+
+	<bean id="factory" class="spring.demo.factory.RefrigeratorFactory"/>
+	<bean id="refrigerator0" factory-bean="factory" factory-method="produce"/>
+
+	<bean id="beanRegistryEventListener" class="spring.demo.listener.BeanRegistryEventListener"></bean>
+</beans>

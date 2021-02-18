@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mynamespace="http://www.jason.com/schema/microwave"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+				           http://www.springframework.org/schema/context
+				            https://www.springframework.org/schema/context/spring-context-4.3.xsd
+                          http://www.jason.com/schema/microwave
+                            http://www.jason.com/schema/microwave.xsd">
+    <!-- 上述的http://www.jason.com/schema/microwave.xsd对应name为microwave的xsd，即custom.xsd -->
+    <!-- 上述的xmlns:mynamespace可随意修改 -->
+    <mynamespace:microwave id="microwave_x" from="Africa"></mynamespace:microwave>
+
+</beans>
