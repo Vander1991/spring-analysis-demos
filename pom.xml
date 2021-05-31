@@ -10,13 +10,12 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>applicationcontext-ioc</module>
-        <module>inject-beans</module>
         <module>start-process</module>
         <module>parse-configuration-class</module>
         <module>infer-constructor</module>
-        <module>spring-mybatis</module>
         <module>circulated-dependency</module>
         <module>spring-aop</module>
+        <module>bean-life-cycle</module>
     </modules>
 
     <dependencies>

@@ -22,7 +22,8 @@ public class CglibProxyTest {
         Student student = new Student(2010130110, "jason");
         StudentService studentService = new StudentServiceImpl();
         MethodInterceptor methodInterceptor = new MethodInterceptorImpl();
-
+        StudentService studentServiceProxy = (StudentService) getInstance(studentService, methodInterceptor);
+        studentServiceProxy.doSomeSports(student);
     }
 
     /**
@@ -66,7 +67,9 @@ public class CglibProxyTest {
         public Object intercept(Object obj, Method method, Object[] args, MethodProxy methodProxy)
                 throws Throwable {
             System.out.println("MethodInterceptorImpl.intercept:");
-            return method.invoke(obj, args);
+//            method.invoke(obj, args);
+//            return null;
+            return null;
         }
     }
 
