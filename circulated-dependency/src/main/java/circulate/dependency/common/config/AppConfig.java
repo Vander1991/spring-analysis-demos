@@ -1,7 +1,6 @@
 package circulate.dependency.common.config;
 
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
@@ -10,7 +9,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @description :
  */
 @EnableAspectJAutoProxy
-@Configuration
 @ComponentScan("circulate.dependency.common")
 public class AppConfig {
 }

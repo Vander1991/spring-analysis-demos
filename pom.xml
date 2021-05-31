@@ -17,6 +17,7 @@
         <module>spring-mybatis</module>
         <module>circulated-dependency</module>
         <module>spring-aop</module>
+        <module>bean-life-cycle</module>
     </modules>
 
     <dependencies>
