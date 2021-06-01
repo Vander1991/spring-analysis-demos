@@ -15,7 +15,7 @@ public class HusbandAspect {
 
     @Before("execution(public void circulate.dependency.common.model.Husband.makeMoney())")
     public void enhanceMethod() {
-
+        System.out.println("before husband makeMoney : enhanceMethod!");
     }
 
 }

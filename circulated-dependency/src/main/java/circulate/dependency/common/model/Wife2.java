@@ -1,6 +1,5 @@
 package circulate.dependency.common.model;
 
-import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,23 +9,23 @@ import org.springframework.stereotype.Component;
  * @date :   2021/2/1
  * @description :
  */
-@Getter
 @Setter
 @Component
-public class Husband {
+public class Wife2 {
 
     @Autowired
-    private Wife wife;
+    private Husband husband;
 
-    @Autowired
-    private Wife2 wife2;
-
-    public void makeMoney() {
-        System.out.println("makeMoney");
+    public void makeUp() {
+        System.out.println("makeUp");
     }
 
-    public void printMyWife() {
-        System.out.println(this.toString() + "'s " + wife);
+    public Husband getHusband() {
+        return husband;
+    }
+
+    public void printMyHusband() {
+        System.out.println(this.toString() + "'s " + husband);
     }
 
 }
