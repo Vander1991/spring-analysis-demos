@@ -1,4 +1,4 @@
-package lifecycle.analysis;
+package lifecycle.analyse;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;

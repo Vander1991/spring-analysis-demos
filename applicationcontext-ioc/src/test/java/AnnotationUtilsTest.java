@@ -18,7 +18,8 @@ public class AnnotationUtilsTest {
     static {
         try {
             priorityAnnotationType = (Class<? extends Annotation>)
-                    ClassUtils.forName("org.springframework.context.annotation.Configuration", AnnotationUtilsTest.class.getClassLoader());
+                    ClassUtils.forName("org.springframework.context.annotation.Configuration",
+                            AnnotationUtilsTest.class.getClassLoader());
         }
         catch (Throwable ex) {
             // javax.annotation.Priority not available
